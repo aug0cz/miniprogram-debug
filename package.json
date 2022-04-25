@@ -1,6 +1,6 @@
 {
   "name": "miniprogram-debug",
-  "version": "0.1.0-beta.2",
+  "version": "0.1.0-beta.3",
   "repository": {
     "type": "git",
     "url": "git@github.com:aug0cz/miniprogram-debug.git"
@@ -47,7 +47,7 @@
     }
   },
   "main": "./src/index.js",
-  "browser": "./src/browser.js",
+  "browser": "./src/miniprogram.js",
   "engines": {
     "node": ">=6.0"
   }
