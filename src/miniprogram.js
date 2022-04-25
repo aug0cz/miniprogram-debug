@@ -255,12 +255,6 @@ function load() {
 	return r;
 }
 
-const storageAdapter = {
-	setItem: wx.setStorageSync,
-	getItem: wx.getStorageSync,
-    removeItem: wx.removeStorageSync
-};
-
 /**
  * Localstorage attempts to return the localstorage.
  *
@@ -276,7 +270,11 @@ function localstorage() {
 	try {
 		// TVMLKit (Apple TV JS Runtime) does not have a window object, just localStorage in the global context
 		// The Browser also has localStorage in the global context.
-		return storageAdapter;
+		return {
+			setItem: wx.setStorageSync,
+			getItem: wx.getStorageSync,
+			removeItem: wx.removeStorageSync,
+		};
 	} catch (error) {
 		// Swallow
 		// XXX (@Qix-) should we be logging these?
