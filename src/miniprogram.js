@@ -170,7 +170,7 @@ function useColors() {
 
 function formatArgs(args) {
 	args[0] =
-		(this.useColors ? '%c' : '') +
+		(this.useColors ? ' %c' : '') +
 		this.namespace +
 		(this.useColors ? ' %c' : ' ') +
 		args[0] +
